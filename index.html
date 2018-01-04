@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- META -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+    <!-- TITLE -->
+    <title>Train Scheduler</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo center">
+                <i class="material-icons">train</i>Locomotive</a>
+
+
+            <ul id="nav-mobile" class="side-nav">
+                <li>
+                    <a href="#">Navbar Link</a>
+                </li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <br>
+            <h1 class="header center light-blue-text">Search Train Schedules</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Scroll down to add trains</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <br>
+                            <br>
+                            <table class="table responsive-table centered highlight bordered" id='train-table'>
+                                <thead>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Destination</th>
+                                        <th>Frequency (min)</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--  -->
+                        <div class="section no-pad-bot" id="index-banner">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <h1 class="header center light-blue-text">Didn't find your train?</h1>
+                                <div class="row center">
+                                    <h5 class="header col s12 light">Add trains below</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- add trains -->
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label for="train-name">Train Name</label>
+                                        <input type="text" class="form-control" id="trainNameInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label for="destination">Destination</label>
+                                        <input type="text" class="form-control" id="destinationInput">
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                                        <input type="text" class="form-control" id="trainTimeInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label for="frequency">Frequency (min)</label>
+                                        <input type="text" class="form-control" id="frequencyInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- submit -->
+                        <a class="waves-effect light-blue lighten-1 btn-large">
+                            <i class="material-icons right" id="submitTrain">send</i>Submit
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <footer class="page-footer light-blue lighten-1">
+        <div class="footer-copyright light-blue lighten-1">
+            <div class="container light-blue lighten-1">
+                © 2017-2018
+                <a class="orange-text text-lighten-3 centered" href="https://github.com/chrisobo98" target="_blank">Christopher Bermudez</a>, All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="traintime-logic.js"></script>
+
+</body>
+
+</html>
